@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PSYTEN — Viaje audiovisual</title>
+  <meta name="description" content="PSYTEN · colectivo audiovisual psicodélico. Color, sonido y formas que respiran." />
+  <meta name="theme-color" content="#12002e" />
+  <meta property="og:title" content="PSYTEN — Viaje audiovisual" />
+  <meta property="og:description" content="Color, sonido y formas que respiran." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Space+Grotesk:wght@400;500;700&family=Monoton&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- animated aurora background -->
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- gooey liquid blobs -->
+  <div class="goo-layer" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-cursor" data-cursor></div>
+  </div>
+
+  <!-- SVG filters -->
+  <svg width="0" height="0" aria-hidden="true">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur" />
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- nav -->
+  <header class="nav">
+    <a class="brand" href="#top">PSYTEN</a>
+    <nav class="nav-links">
+      <a href="#manifiesto">Manifiesto</a>
+      <a href="#visiones">Visiones</a>
+      <a href="#colectivo">Colectivo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="trip-btn" data-trip aria-pressed="false">TRIP MODE: <span data-trip-state>OFF</span></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="kicker reveal">colectivo audiovisual · desde el más allá</p>
+      <h1 class="hero-title" data-melt>
+        <span>P</span><span>S</span><span>Y</span><span>T</span><span>E</span><span>N</span>
+      </h1>
+      <p class="hero-sub reveal">Color, sonido y formas que respiran. Un viaje audiovisual para los ojos que aún saben soñar.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-solid" href="#visiones">Entra al viaje ✺</a>
+        <a class="btn btn-ghost" href="#manifiesto">¿Qué es esto?</a>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span>scroll</div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto" id="manifiesto">
+      <p class="section-tag reveal">✦ Manifiesto ✦</p>
+      <h2 class="wavy reveal">No diseñamos webs.<br />Diseñamos estados mentales.</h2>
+      <p class="lead reveal">PSYTEN nació de una idea sencilla: que una pantalla pudiera latir. Mezclamos gradientes imposibles, tipografías que se derriten y ritmos de color para provocar eso que no tiene nombre —esa cosquilla detrás de los ojos cuando algo es demasiado bonito para ser útil.</p>
+      <div class="marquee reveal" aria-hidden="true">
+        <div class="marquee-track">
+          <span>SONIDO ✺ COLOR ✺ FORMA ✺ ÉXTASIS ✺ RITMO ✺ SUEÑO ✺&nbsp;</span>
+          <span>SONIDO ✺ COLOR ✺ FORMA ✺ ÉXTASIS ✺ RITMO ✺ SUEÑO ✺&nbsp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIONES gallery -->
+    <section class="visiones" id="visiones">
+      <p class="section-tag reveal">✦ Visiones ✦</p>
+      <h2 class="reveal">Piezas para mirar fijamente</h2>
+      <div class="gallery">
+        <article class="vision v1 reveal"><span class="vision-n">01</span><h3>Nebulosa Violeta</h3><p>Un cielo que nunca existió.</p></article>
+        <article class="vision v2 reveal"><span class="vision-n">02</span><h3>Éxtasis Líquido</h3><p>El color como sustancia.</p></article>
+        <article class="vision v3 reveal"><span class="vision-n">03</span><h3>Jardín Fractal</h3><p>Crece si lo miras despacio.</p></article>
+        <article class="vision v4 reveal"><span class="vision-n">04</span><h3>Eco Solar</h3><p>Calor en forma de onda.</p></article>
+        <article class="vision v5 reveal"><span class="vision-n">05</span><h3>Sueño Analógico</h3><p>Nostalgia de algo futuro.</p></article>
+        <article class="vision v6 reveal"><span class="vision-n">06</span><h3>Frecuencia 528</h3><p>La nota que no oyes: la ves.</p></article>
+      </div>
+    </section>
+
+    <!-- COLECTIVO -->
+    <section class="colectivo" id="colectivo">
+      <p class="section-tag reveal">✦ El colectivo ✦</p>
+      <h2 class="reveal">Un puñado de humanos<br />persiguiendo el asombro.</h2>
+      <p class="lead reveal">Fuimos artistas visuales, músicos y programadores. Un día decidimos borrar la línea entre esas tres cosas. PSYTEN es lo que quedó: un laboratorio de belleza inútil y necesaria.</p>
+      <p class="whisper reveal">*Esta es una pieza de demostración. PSYTEN es un experimento de diseño — la marca ya no opera.</p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+      <p class="section-tag reveal">✦ Contacto ✦</p>
+      <h2 class="reveal glow">¿Nos vibras?</h2>
+      <a class="mail reveal" href="mailto:hola@psyten.es">hola@psyten.es</a>
+      <div class="socials reveal">
+        <a href="#">Instagram</a><a href="#">SoundCloud</a><a href="#">Vimeo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>PSYTEN © <span data-year></span> · hecho en un momento de lucidez</span>
+    <a class="credit" href="https://ruizdavies.com" target="_blank" rel="noopener">Diseño: Ruiz &amp; Davies</a>
+  </footer>
+
+  <script src="assets/js/psy.js" defer></script>
+</body>
+</html>
