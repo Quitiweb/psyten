@@ -29,7 +29,11 @@ python3 -m http.server 8080
 
 Al ser estático puro, se publica **directo desde la rama**:
 Settings → Pages → Build and deployment → Source: **Deploy from a branch** → `main` / `root`.
-El `CNAME` fija el dominio psyten.es.
+
+Se sirve en `https://quitiweb.github.io/psyten/` (rutas relativas, funciona bajo subcarpeta).
+Para usar el dominio `psyten.es` en el futuro: añadir un archivo `CNAME` con `psyten.es`
+y apuntar los registros A del dominio a las IPs de GitHub Pages
+(185.199.108–111.153).
 
 ## Notas de diseño
 
